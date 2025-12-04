@@ -17,17 +17,27 @@ def getrickymort(name):
         "origin": character["origin"]
         
       }
-CHARACTER=getrickymort("pickle")
-print(CHARACTER)
 import tkinter as tk
 root = tk.Tk()
 root.title("RICK AND MORTY  CHARACTERS")
-root.geometry("800x400")
+root.geometry("1000x600")
 Label=tk.Label(root,text="USE THE SEARCH BAR TO SEARCH FOR RICK AND MORTY CHARACTERS")
 Label.pack(pady=20)
 search =tk.Entry(root,width=50)
 search.pack(pady=10)
-tk.Button(root,text="search", command=search_character).pack(pady=10)
-search.get()
+outcome_label= tk.Label(root,text="")
+outcome_label.pack(pady=20)
+
+
+def search_CHARACTER():
+      name= search.get()
+      CHARACTER=getrickymort(name)
+      outcome_label.config(text=str(CHARACTER))
+      print(CHARACTER)
+
+tk.Button(root,text="search",command=search_CHARACTER ).pack(pady=10)
+
+
+
 root.mainloop()
 
