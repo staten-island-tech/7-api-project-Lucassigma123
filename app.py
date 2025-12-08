@@ -1,5 +1,6 @@
 import requests
 
+
 def getrickymort(name):
   response = requests.get(f"https://rickandmortyapi.com/api/character/?name={name.lower()}")
   if response.status_code != 200:
@@ -14,13 +15,12 @@ def getrickymort(name):
         "species": character["species"],
         "type": character["type"],
         "gender": character["gender"],
-        "origin": character["origin"]
-        
+        "origin": character["origin"],
       }
 import tkinter as tk
 root = tk.Tk()
 root.title("RICK AND MORTY  CHARACTERS")
-root.geometry("1200x600")
+root.geometry("1280x600")
 
 def search_CHARACTER():
       name= search.get()
@@ -33,7 +33,7 @@ Label.pack(pady=10)
 search =tk.Entry(root,width=50)
 search.pack(pady=10)
 tk.Button(root,text="search",command=search_CHARACTER ).pack(pady=10)
-outcome_label= tk.Label(root,font=("Georgia",12),text="")# outcome of the search
+outcome_label= tk.Label(root,font=("Georgia",12),text="",)# outcome of the search wraplength is characters per row of text
 outcome_label.pack(pady=50)
 root.mainloop()
 
