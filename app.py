@@ -25,7 +25,11 @@ def search_CHARACTER():
       CHARACTER=getrickymort(name)
       outcome_label.config(text=str(CHARACTER))
       print(CHARACTER)
-
+def randomfact():
+     x="Rick Is Afraid Of Pirates"
+     y="Rick And Birdperson Share A Kiss In The Comics"
+     z="Mr. Poopybutthole Was The Parasite Catalyst"
+     print(x)
 Label=tk.Label(root,text="USE THE SEARCH BAR TO SEARCH FOR RICK AND MORTY CHARACTERS")
 Label.pack(pady=10)
 search =tk.Entry(root,width=50)
@@ -33,5 +37,6 @@ search.pack(pady=10)
 tk.Button(root,text="search",command=search_CHARACTER ).pack(pady=10)
 outcome_label= tk.Label(root,font=("Georgia",12),text="",)# outcome of the search 
 outcome_label.pack(pady=50)
+tk.Button(root,text="random fact",command=)
 root.mainloop()
 
