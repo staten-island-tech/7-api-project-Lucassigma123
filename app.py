@@ -1,5 +1,6 @@
 import requests
 import random
+import json
 def getrickymort(name):
   response = requests.get(f"https://rickandmortyapi.com/api/character/?name={name.lower()}")
   if response.status_code != 200:
@@ -27,19 +28,21 @@ def search_CHARACTER():
       outcome_label.config(text=str(CHARACTER))
       print(CHARACTER)
 def randomfact():
-    facts=["Rick Is Afraid Of Pirates",
-           "Rick And Birdperson Share A Kiss In The Comics",
-           "Mr. Poopybutthole Was The Parasite Catalyst"
-    ]
-    print(random.choice(facts))
+    facts=json.load(open("facts.json"))["facts"]
+    y=(random.choice(facts))
+    outcomefact.config(text=str(y))
    
 Label=tk.Label(root,text="USE THE SEARCH BAR TO SEARCH FOR RICK AND MORTY CHARACTERS")
 Label.pack(pady=10)
 search =tk.Entry(root,width=50)
 search.pack(pady=10)
+
 tk.Button(root,text="search",command=search_CHARACTER ).pack(pady=10)
 outcome_label= tk.Label(root,font=("Georgia",12),text="",)# outcome of the search 
 outcome_label.pack(pady=50)
-tk.Button(root,text="random fact",command=randomfact).pack(pady=200)
+
+tk.Button(root,text="random fact",command=randomfact).pack(pady=30)
+outcomefact=tk.Label(root,font=("Georgia",12),text="",)
+outcomefact.pack(pady=50)
 root.mainloop()
 
