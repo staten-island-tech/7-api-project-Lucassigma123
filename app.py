@@ -37,11 +37,11 @@ Label.pack(pady=10)
 search =tk.Entry(root,width=50)
 search.pack(pady=10)
 
-tk.Button(root,text="search",command=search_CHARACTER ).pack(pady=10)
+tk.Button(root,text="SEARCH",command=search_CHARACTER ).pack(pady=10)
 outcome_label= tk.Label(root,font=("Georgia",12),text="",)# outcome of the search 
 outcome_label.pack(pady=50)
 
-tk.Button(root,text="random fact",command=randomfact).pack(pady=30)
+tk.Button(root,text="RANDOM FACT",command=randomfact).pack(pady=30)
 outcomefact=tk.Label(root,font=("Georgia",12),text="",)
 outcomefact.pack(pady=50)
 root.mainloop()
