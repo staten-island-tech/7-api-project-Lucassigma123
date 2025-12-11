@@ -6,7 +6,7 @@ def getrickymort(name):
   if response.status_code != 200:
         print("Error fetching data!")
         return None
-    
+
   data = response.json()
   character=data["results"][0]
   return {
@@ -43,6 +43,6 @@ outcome_label.pack(pady=50)
 
 tk.Button(root,text="RANDOM FACT",command=randomfact).pack(pady=30)
 outcomefact=tk.Label(root,font=("Georgia",12),text="",)
-outcomefact.pack(pady=50)
+outcomefact.pack(pady=40)
 root.mainloop()
 
