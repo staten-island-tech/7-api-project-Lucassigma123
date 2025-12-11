@@ -31,7 +31,7 @@ def randomfact():
     facts=json.load(open("facts.json"))["facts"]
     y=(random.choice(facts))
     outcomefact.config(text=str(y))
-   
+
 Label=tk.Label(root,text="USE THE SEARCH BAR TO SEARCH FOR RICK AND MORTY CHARACTERS")
 Label.pack(pady=10)
 search =tk.Entry(root,width=50)
@@ -44,5 +44,10 @@ outcome_label.pack(pady=50)
 tk.Button(root,text="RANDOM FACT",command=randomfact).pack(pady=30)
 outcomefact=tk.Label(root,font=("Georgia",12),text="",)
 outcomefact.pack(pady=40)
-root.mainloop()
 
+
+def questions():
+     tk
+tk.Button(root,text="Quiz",command=).pack(pady=50)
+
+root.mainloop()
