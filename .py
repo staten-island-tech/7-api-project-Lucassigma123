@@ -52,8 +52,6 @@ outcomefact.pack(pady=40)
 def show_quiz():
     Home.pack_forget()
     quiz.pack(fill="both", expand=True)
-     
-
 tk.Button(Home,text="Quiz",command=show_quiz).pack(pady=50)
-
+tk.Label(quiz,text="Quiz screen",font=("Georgia",24)).pack(pady=20)
 root.mainloop()
