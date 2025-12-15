@@ -48,7 +48,6 @@ outcomefact.pack(pady=40)
 
 
 def questions():
-     tk
-tk.Button(root,text="Quiz",command=).pack(pady=50)
+    tk.Button(root,text="Quiz",command=).pack(pady=50)
 
 root.mainloop()
