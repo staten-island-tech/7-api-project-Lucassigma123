@@ -24,7 +24,7 @@ Home = tk.Frame(root)
 quiz = tk.Frame(root)
 Home.pack(fill="both", expand=True)
 root.title("RICK AND MORTY  CHARACTERS")
-root.geometry("1280x800")
+root.geometry("1280x600")
 
 def search_CHARACTER():
       name= search.get()
@@ -52,6 +52,6 @@ outcomefact.pack(pady=40)
 def show_quiz():
     Home.pack_forget()
     quiz.pack(fill="both", expand=True)
-tk.Button(Home,text="Quiz",command=show_quiz).pack(pady=50)
-tk.Label(quiz,text="Quiz screen",font=("Georgia",24)).pack(pady=20)
+tk.Button(Home,text="game",command=show_quiz).pack(pady=50)
+tk.Label(quiz,text="game screen",font=("Georgia",24)).pack(pady=20)
 root.mainloop()
