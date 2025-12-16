@@ -48,10 +48,22 @@ outcome_label.pack(pady=50)
 tk.Button(Home,text="RANDOM FACT",command=randomfact).pack(pady=30)
 outcomefact=tk.Label(Home,font=("Georgia",12),text="",)
 outcomefact.pack(pady=40)
-
+def show_home():
+    quiz.pack_forget()
+    Home.pack(fill="both", expand=True)
 def show_quiz():
     Home.pack_forget()
     quiz.pack(fill="both", expand=True)
+
 tk.Button(Home,text="game",command=show_quiz).pack(pady=50)
 tk.Label(quiz,text="game screen",font=("Georgia",24)).pack(pady=20)
+tk.Button(quiz,text="return",command=show_home).pack(pady=10)
+count=0
+def click():
+    global count 
+    count+=1
+    label.config(text=count)
+tk.Button(quiz,text="click me",command=click).pack(pady=50)
+label= tk.Label(quiz,text=0)
+label.pack(pady=40)
 root.mainloop()
