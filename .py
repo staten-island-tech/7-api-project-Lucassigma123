@@ -55,13 +55,14 @@ def show_quiz():
     Home.pack_forget()
     quiz.pack(fill="both", expand=True)
 
-tk.Button(Home,text="game",command=show_quiz).pack(pady=50)
-tk.Label(quiz,text="game screen",font=("Georgia",24)).pack(pady=20)
+tk.Button(Home,text="Click game",command=show_quiz).pack(pady=50)
+tk.Label(quiz,text="Click game ",font=("Georgia",24)).pack(pady=20)
 tk.Button(quiz,text="return",command=show_home).pack(pady=10)
 count=0
 def click():
     global count 
-    count+=1
+    y=1
+    count+=y
     label.config(text=count)
 tk.Button(quiz,text="click me",command=click).pack(pady=50)
 label= tk.Label(quiz,text=0)
