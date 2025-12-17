@@ -59,12 +59,27 @@ tk.Button(Home,text="Click game",command=show_quiz).pack(pady=50)
 tk.Label(quiz,text="Click game ",font=("Georgia",24)).pack(pady=20)
 tk.Button(quiz,text="return",command=show_home).pack(pady=10)
 count=0
+y=1
+x=100
+
 def click():
-    global count 
-    y=1
+    global count,y
     count+=y
     label.config(text=count)
 tk.Button(quiz,text="click me",command=click).pack(pady=50)
 label= tk.Label(quiz,text=0)
 label.pack(pady=40)
+        
+
+
+def twofifty():
+    global count,y,x
+    if count >=x:
+        count-=x
+        y+=4
+        x= int(x* 1.25)
+        
+    
+tk.Button(quiz,text=f"Rebirth $ {x}",command=twofifty).pack(pady=40)
+
 root.mainloop()
