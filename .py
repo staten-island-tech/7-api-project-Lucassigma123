@@ -68,18 +68,17 @@ def click():
     label.config(text=count)
 tk.Button(quiz,text="click me",command=click).pack(pady=50)
 label= tk.Label(quiz,text=0)
-label.pack(pady=40)
-        
-
+label.pack(pady=40)      
 
 def twofifty():
     global count,y,x
     if count >=x:
         count-=x
-        y+=4
-        x= int(x* 1.25)
-        
-    
-tk.Button(quiz,text=f"Rebirth $ {x}",command=twofifty).pack(pady=40)
+        y*=2
+        x= int(x* 1.5)
+        sigma.config(text=f"Rebirth $ {x}")
+  
 
+sigma=tk.Button(quiz,text=f"Rebirth $ {x}",command=twofifty)
+sigma.pack(pady=40)
 root.mainloop()
