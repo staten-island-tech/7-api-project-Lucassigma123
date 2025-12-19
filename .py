@@ -60,7 +60,7 @@ tk.Label(quiz,text="Click game ",font=("Georgia",24)).pack(pady=20)
 tk.Button(quiz,text="return",command=show_home).pack(pady=10)
 count=0
 y=1
-x=100
+x=50
 
 def click():
     global count,y
